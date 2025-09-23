@@ -1,5 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
+from backend.models.patrimonio import Patrimonio
+
 
 class Database:
     def __init__(self):
@@ -27,3 +29,4 @@ class Database:
         cursor = self.connection.cursor(dictionary=True)
         cursor.execute(query, params)
         return cursor.fetchall()
+    
